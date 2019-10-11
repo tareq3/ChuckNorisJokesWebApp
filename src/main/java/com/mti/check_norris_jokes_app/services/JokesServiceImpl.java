@@ -13,15 +13,18 @@ public class JokesServiceImpl implements JokesService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokesServiceImpl() {
-        chuckNorrisQuotes = new ChuckNorrisQuotes();
-    } 
+    public JokesServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
+    }
+    
 
     @Override
     public String getJokes() {
         // TODO Auto-generated method stub
         return chuckNorrisQuotes.getRandomQuote();
     }
+
+   
 
    
 
